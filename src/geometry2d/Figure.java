@@ -1,6 +1,8 @@
 package geometry2d;
 
-public interface Figure {
+import java.io.Serializable;
+
+public interface Figure extends Serializable {
     double getArea();
-    double getPerimetr();
+    double getPerimeter();
 }
