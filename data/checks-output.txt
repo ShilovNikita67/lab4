@@ -1,0 +1,84 @@
+
+== Вычисления
+  OK    круг: площадь
+  OK    круг: периметр
+  OK    прямоугольник: площадь
+  OK    прямоугольник: периметр
+  OK    цилиндр с кругом: объём
+  OK    цилиндр с прямоугольником: объём
+  OK    toString круга
+
+== Проверка параметров
+  OK    Circle(0.0): ParamException
+  OK    Rectangle(0.0, 1): ParamException
+  OK    Rectangle(1, 0.0): ParamException
+  OK    Cylinder(base, 0.0): ParamException
+  OK    Circle(-1.0): ParamException
+  OK    Rectangle(-1.0, 1): ParamException
+  OK    Rectangle(1, -1.0): ParamException
+  OK    Cylinder(base, -1.0): ParamException
+  OK    Circle(NaN): ParamException
+  OK    Rectangle(NaN, 1): ParamException
+  OK    Rectangle(1, NaN): ParamException
+  OK    Cylinder(base, NaN): ParamException
+  OK    Circle(Infinity): ParamException
+  OK    Rectangle(Infinity, 1): ParamException
+  OK    Rectangle(1, Infinity): ParamException
+  OK    Cylinder(base, Infinity): ParamException
+  OK    Circle(-Infinity): ParamException
+  OK    Rectangle(-Infinity, 1): ParamException
+  OK    Rectangle(1, -Infinity): ParamException
+  OK    Cylinder(base, -Infinity): ParamException
+  OK    Cylinder(null, 1): ParamException
+  OK    сообщение с параметром и причиной
+
+== finally
+    Java
+    Проверка завершена
+    Текст не должен быть пустым
+    Проверка завершена
+    Текст не должен быть null
+    Проверка завершена
+  OK    finally выполнен 3 раза
+
+== Текстовое чтение
+  OK    figures.txt: 4 фигуры
+  OK    empty.txt: пустой список
+  OK    unknown-type.txt: FormatException
+      Строка 2: неизвестный тип фигуры 'TRIANGLE'
+  OK    unknown-type.txt: строка 2
+  OK    wrong-count.txt: FormatException
+      Строка 2: для RECTANGLE нужно параметров: 2, найдено: 1
+  OK    wrong-count.txt: строка 2
+  OK    bad-number.txt: FormatException
+      Строка 3: параметр 'radius': 'abc' не является числом
+  OK    bad-number.txt: строка 3
+  OK    bad-number.txt: причина NumberFormatException
+  OK    negative.txt: FormatException
+      Строка 2: Параметр 'radius': значение должно быть положительным, получено -5.0
+  OK    negative.txt: строка 2
+  OK    negative.txt: причина ParamException
+
+== Файловые ошибки
+  OK    TextStorage: нет файла: IOException
+  OK    TextStorage: запись в каталог: IOException
+  OK    TextStorage: пустой список
+  OK    BinStorage: нет файла: IOException
+  OK    BinStorage: запись в каталог: IOException
+  OK    BinStorage: пустой список
+  OK    текст: неверная UTF-8: MalformedInputException
+
+== Запись и чтение
+  OK    TextStorage: списки равны
+  OK    TextStorage: расчёты совпадают
+  OK    BinStorage: списки равны
+  OK    BinStorage: расчёты совпадают
+
+== Бинарные файлы
+  OK    мусор: IOException
+  OK    обрезанный файл: IOException
+  OK    файл нулевой длины: IOException
+  OK    String вместо списка: IOException
+  OK    Cylinder в списке: IOException
+
+Итого: успешно 58, с ошибкой 0
